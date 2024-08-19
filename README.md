@@ -56,14 +56,6 @@ python workflow_gen.py \
     --models Llama-2-7b-chat-hf gpt-3.5-turbo
 ```
 
-python workflow_gen.py \
-    --data_path data/gsm8k/demo.jsonl \
-    --env gsm8k \
-    --log_dir log/gsm8k_demo/ \
-    --max_turns 2 \
-    --num_of_samples 1 1 \
-    --models Llama-2-7b-chat-hf gpt-3.5-turbo
-
 #### Example2 (Self-distillation): Generates second iteration trajectories for MATH problems:
 1. The first action is sampled from Mistral-7B-Instruct-v0.2.
 2. The second action (improved action) is sampled from Mistral-7B-Instruct-v0.2 using a best-of-n approach, where n = 16.
@@ -158,14 +150,6 @@ python workflow_eval.py \
     --max_turns 1 \
     --num_of_samples 5 \
 ```
-
-python workflow_eval.py \
-    --model Llama-2-7b-chat-hf \
-    --data_path data/gsm8k/demo.jsonl \
-    --env gsm8k \
-    --log_dir log/ \
-    --max_turns 1 \
-    --num_of_samples 5 
 
 ## Citation
 The code in this repository is mostly developed for or derived from the paper below. Please cite it if you find the repository helpful.
