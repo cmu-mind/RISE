@@ -152,6 +152,15 @@ python workflow_eval.py \
     --num_of_samples 5 \
 ```
 
+### Error
+If encounter Error #1 when finetune >= Llama-3.1
+```
+ValueError^: ^`rope_scaling` must be a dictionary with with two fields, `type` and `factor`, got {'factor': 8.0, 'low_freq_factor': 1.0, 'high_freq_factor': 4.0, 'original_max_position_embeddings': 8192, 'rope_type': 'llama3'}^
+```
+
+Try `pip install --upgrade transformer`
+
+
 ## Citation
 The code in this repository is mostly developed for or derived from the paper below. Please cite it if you find the repository helpful.
 

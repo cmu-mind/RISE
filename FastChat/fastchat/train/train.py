@@ -491,7 +491,7 @@ def train():
 
 
     # Start trainner
-    trainer = Trainer(
+    trainer = CustomTrainer(
         model=model, tokenizer=tokenizer, args=training_args, **data_module
     )
     if list(pathlib.Path(training_args.output_dir).glob("checkpoint-*")):
