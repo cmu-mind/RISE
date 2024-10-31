@@ -24,7 +24,7 @@ cd FastChat
 pip3 install --upgrade pip
 pip3 install packaging ninja wheel config tenacity gym nltk openai==0.28.1
 pip3 install -e ".[model_worker,webui]"
-pip3 install flash-attn --no-build-isolation
+pip3 install flash-attn==2.5.8 --no-build-isolation
 pip3 install -e ".[train]"
 ```
 
